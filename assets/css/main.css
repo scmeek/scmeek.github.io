@@ -838,7 +838,6 @@ small {
   .wrapper .basic .avatar {
     display: block;
     margin: 30px auto;
-    border-radius: 100%;
   }
   .wrapper .basic .header {
     text-align: center;
