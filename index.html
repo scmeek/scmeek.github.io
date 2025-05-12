@@ -1,731 +1,226 @@
 <!DOCTYPE html>
-<html lang='en' dir='ltr'>
-  <head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sean C Meek Resume">
-<title>Sean C Meek Resume</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<html lang="en">
 
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css">
-<link rel="stylesheet" href="/assets/fontawesome/css/brands.min.css">
-<link rel="stylesheet" href="/assets/fontawesome/css/solid.min.css">
-<link rel="stylesheet" href="/assets/icons/css/all.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  
+  <meta name="description" content="xxxx xxxx xxxx">
+
+  <title>Novos</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://novos.onl/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://novos.onl/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://novos.onl/img/apple-touch-icon.png">
+  <style>
+  /* mulish-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/font/mulish-v13-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* short-stack-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Short Stack";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/font/short-stack-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* caudex-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Caudex";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/font/caudex-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "Hack Nerd Font Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/font/HackNerdFontMono-Regular.woff2") format("woff2");
+  }
+</style>
+
+  <style>
+  /* light mode colors */
+  body {
+    --primary-color: #5871a2;
+    --primary-pale-color: #5871a233;
+    --primary-decoration-color: #a8a29e10;
+    --highlight-mark-color: #5f75b020;
+    --bg-color: #fafaf9;
+    --text-color: #44403c;
+    --text-pale-color: #78716c;
+    --text-decoration-color: #a8a29e;
+
+    --callout-note-color: #5871a2;
+    --callout-tip-color: #065f46;
+    --callout-important-color: #7c3aed;
+    --callout-warning-color: #d97706;
+    --callout-caution-color: #e11d48;
+  }
+
+  /* dark mode colors */
+  body.dark {
+    --primary-color: #6f8fd1;
+    --primary-pale-color: #6f8fd166;
+    --primary-decoration-color: #a8a29e10;
+    --bg-color: #1c1917;
+    --text-color: #d6d3d1;
+    --text-pale-color: #a8a29e;
+    --text-decoration-color: #57534e;
+    --highlight-mark-color: #8296cb3b;
+
+    --callout-note-color: #6f8fd1;
+    --callout-tip-color: #10b981;
+    --callout-important-color: #9333ea;
+    --callout-warning-color: #d97706;
+    --callout-caution-color: #e11d48;
+  }
+
+  /* typography */
+  body {
+    --main-font: "Mulish", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --script-font: "Short Stack";
+    --code-font: "Hack Nerd Font Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --homepage-max-width: 768px;
+    --main-max-width: 768px;
+    --avatar-size: 60px;
+    --font-size: 16px;
+    --line-height: 1.75;
+    --img-border-radius: 0px;
+    --detail-border-radius: 0px;
+    --dark-mode-img-brightness: 0.75;
+    --dark-mode-chart-brightness: 0.75;
+    --inline-code-border-radius: 2px;
+    --inline-code-bg-color: var(--primary-decoration-color);
+    --block-code-border-radius: 0px;
+    --block-code-border-color: var(--text-decoration-color);
+    --detail-border-color: var(--text-decoration-color);
+  }
+</style>
+
+  <link rel="stylesheet" href="https://novos.onl/main.css">
+  
+
+  
+    <link id="hl" rel="stylesheet" type="text/css" href="https://novos.onl/hl-light.css" />
+  
 
 
-<!-- Umami Web Analytics -->
-<script async defer src="https://cloud.umami.is/script.js"
-  data-website-id="dba6236c-f2e5-43fe-86d8-fe3fc2aed1c1"
-  ></script>
-<!-- End Umami Web Analytics -->
 
-  </head>
-  <body>
-    <div class="wrapper">
-<section class="basic">
-  <img class="avatar" src="/assets/images/contact_qr.png" alt="avatar">
+  <script>
+  console.debug("Commit Hash: 158198534df27aedea2cf67befa41028562939ef");
+</script>
 
-  <div class="header" >
-    <h2 class="name">SEAN C MEEK</h2>
-    <h3 class="title">Security-Focused Full-Stack Software Engineer</h3>
-<div class="contact" >
-  <div class="contact-item" title="Location">
-    <i class="fa-solid fa-location-dot"></i>
-      <span>Denver, CO</span>
-  </div>
-  <div class="contact-item" title="Email">
-    <i class="fa-solid fa-envelope"></i>
-    <a href="mailto:letsbuildtogether@seanmeek.com" title="mailto:letsbuildtogether@seanmeek.com">letsbuildtogether@seanmeek.com</a>
-  </div>
-  <div class="contact-item" title="Phone number">
-    <i class="fa-solid fa-phone"></i>
-    <a href="tel:+1 (720) 336-0628" title="tel:+1 (720) 336-0628">+1 (720) 336-0628</a>
-  </div>
-  <div class="contact-item" title="Website">
-    <i class="fa-solid fa-link"></i>
-    <a href="https://seanmeek.com" title="https://seanmeek.com" target="_blank">seanmeek.com</a>
-  </div>
-  <div class="contact-item" title="GitHub">
-    <i class="fa-brands fa-github"></i>
-    <a href="https://github.com/scmeek" title="https://github.com/scmeek" target="_blank">scmeek</a>
-  </div>
-  <div class="contact-item" title="LinkedIn">
-    <i class="fa-brands fa-linkedin"></i>
-    <a href="https://linkedin.com/in/seanmeek" title="https://linkedin.com/in/seanmeek" target="_blank">seanmeek</a>
-  </div>
+
+<script
+  defer
+  src="https://novos.onl/js/script.js"
+  data-website-id="fae0b8e4-0772-4825-be59-b51b6ea076bc"
+  data-host-url="https:&#x2F;&#x2F;novos.onl"
+></script>
+
+
+</head>
+
+<body class="homepage">
+  
+  <script>
+    const theme = sessionStorage.getItem('theme');
+    const match = window.matchMedia("(prefers-color-scheme: dark)").matches
+    if ((theme && theme == 'dark') || (!theme && match)) {
+      document.body.classList.add('dark');
+      const hl = document.querySelector('link#hl');
+      if (hl) hl.href = 'https://novos.onl/hl-dark.css';
+    }
+  </script>
+  
+  
+<div id="wrapper">
+  <main>
+    <section id="info">
+      
+      <img src="https://novos.onl/img/logo.webp" alt="avatar">
+      
+      <div id="text">
+        <div>
+          <span id="name">Novos</span>
+          
+        </div>
+        
+      </div>
+    </section>
+    <section id="links">
+      <div id="left">
+        
+        <a href="https://novos.onl/blog" class="instant">posts</a>
+        
+        <a href="https://novos.onl/about" class="instant">about</a>
+        
+      </div>
+      <div id="right">
+        
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;scmeek" aria-label="GitHub" target="_blank" rel='noreferrer noopener'>
+          
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M5.88401 18.6531C5.58404 18.4523 5.32587 18.1972 5.0239 17.8366C4.91473 17.7062 4.47283 17.1521 4.55811 17.258C4.09533 16.6831 3.80296 16.4168 3.50156 16.3087C2.9817 16.1223 2.7114 15.5497 2.89784 15.0298C3.08428 14.51 3.65685 14.2397 4.17672 14.4261C4.92936 14.696 5.43847 15.1609 6.12425 16.0141C6.03025 15.8972 6.46364 16.4408 6.55731 16.5526C6.74784 16.7802 6.88732 16.918 6.99629 16.9909C7.20118 17.128 7.58451 17.1871 8.14709 17.1308C8.17065 16.7487 8.24136 16.378 8.34919 16.0355C5.38097 15.3101 3.70116 13.3949 3.70116 9.63947C3.70116 8.4006 4.0704 7.28368 4.75917 6.34756C4.5415 5.45368 4.57433 4.37259 5.06092 3.15611C5.1725 2.87715 5.40361 2.66314 5.69031 2.57328C5.77242 2.54949 5.81791 2.5389 5.89878 2.52648C6.70167 2.40319 7.83573 2.69681 9.31449 3.62311C10.181 3.41855 11.0885 3.31476 12.0012 3.31476C12.9129 3.31476 13.8196 3.41835 14.6854 3.62253C16.1619 2.68976 17.2986 2.39625 18.1072 2.52627C18.1919 2.53988 18.2645 2.55758 18.3249 2.57741C18.6059 2.66967 18.8316 2.88155 18.9414 3.15611C19.4279 4.37232 19.4608 5.45319 19.2433 6.34695C19.9342 7.28313 20.3012 8.39184 20.3012 9.63947C20.3012 13.3966 18.627 15.3046 15.6588 16.0318C15.7837 16.4467 15.8496 16.9103 15.8496 17.4118C15.8496 18.0763 15.8471 18.7108 15.8424 19.4223C15.8412 19.6124 15.8397 19.8156 15.8375 20.1279C16.2129 20.2107 16.5229 20.5074 16.6031 20.9086C16.7114 21.4502 16.3602 21.977 15.8186 22.0853C14.6794 22.3132 13.8353 21.5535 13.8353 20.5608C13.8353 20.4705 13.836 20.3414 13.8375 20.1142C13.8398 19.8012 13.8412 19.5987 13.8425 19.4092C13.8471 18.7017 13.8496 18.0714 13.8496 17.4118C13.8496 16.7145 13.6664 16.26 13.4237 16.0508C12.7627 15.481 13.0977 14.3971 13.965 14.2996C16.9314 13.9663 18.3012 12.8174 18.3012 9.63947C18.3012 8.68484 17.9893 7.89547 17.3881 7.23534C17.1301 6.95209 17.0567 6.54634 17.199 6.19062C17.3647 5.77639 17.4354 5.2336 17.2941 4.57678L17.2847 4.57944C16.7928 4.71861 16.1744 5.01956 15.4261 5.52826C15.182 5.69413 14.8772 5.74377 14.5932 5.66388C13.7729 5.43319 12.8913 5.31476 12.0012 5.31476C11.111 5.31476 10.2294 5.43319 9.40916 5.66388C9.12662 5.74335 8.82344 5.69468 8.57997 5.53077C7.8274 5.02414 7.2056 4.72355 6.71079 4.58352C6.56735 5.23672 6.63814 5.77758 6.80336 6.19062C6.94565 6.54634 6.87219 6.95209 6.61423 7.23534C6.01715 7.89096 5.70116 8.69352 5.70116 9.63947C5.70116 12.8114 7.07225 13.9681 10.023 14.2996C10.8883 14.3969 11.2246 15.4767 10.5675 16.048C10.3751 16.2153 10.1384 16.7799 10.1384 17.4118V20.5608C10.1384 21.5472 9.30356 22.2866 8.17878 22.0898C7.63476 21.9946 7.27093 21.4764 7.36613 20.9324C7.43827 20.5201 7.75331 20.2114 8.13841 20.1274V19.1379C7.22829 19.1991 6.47656 19.0496 5.88401 18.6531Z" fill="currentColor"></path></svg>
+
+        </a>
+        
+        <a href="mailto:sean@seanmeek.com" aria-label="Email" target="_blank" rel='noreferrer noopener'>
+          
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z" fill="currentColor"></path></svg>
+
+        </a>
+        
+        
+        
+        
+        <button id="theme-toggle" aria-label="theme switch">
+          <span class="moon-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z" fill="currentColor"></path></svg>
+</span>
+          <span class="sun-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z" fill="currentColor"></path></svg>
+</span>
+        </button>
+        
+      </div>
+    </section>
+    <section id="brief" class="prose">
+      
+    </section>
+    
+    
+    
+    
+    <section class="layout-list">
+      <div class="post-list">
+        
+      </div>
+      <div class="read-more">
+        <a class="instant" href="&#x2F;blog"></a>
+      </div>
+    </section>
+  
+  </main>
+  
 </div>
 
-  </div>
-</section>
+  
+<script src="https://novos.onl/js/lightense.min.js"></script>
 
-<section class="profile" style="order: 1">
-  <div class="section-title">
-    <i class="section-icon fa-solid fa-user"></i>
-    <h2>Profile</h2>
-  </div>
 
-  <div class="section-content">
-    <div class="description markdown">
-      <p>Results-driven and security-focused dynamic software engineer with a passion and proven track record for building robust, secure, and scalable platforms and an in-depth knowledge of software security and InfoSec principles. Strong collaborator committed to fostering inclusive, high-performing teams. Experienced and enthusiastic in leading and mentoring team members, with aspirations to expand leadership responsibilities and make a greater impact in driving team success and secure development practices.</p>
+  <script src="https://novos.onl/js/main.js"></script>
+</body>
 
-    </div>
-  </div>
-</section>
-
-<section class="experience" style="order: 3">
-  <div class="section-title">
-    <i class="section-icon fa-solid fa-briefcase"></i>
-    <h2>Experiences</h2>
-  </div>
-
-  <div class="section-content">
-    <div class="items">
-      <div class="item">
-        <div class="row">
-          <div>
-            <div class="company">
-              <a href="https://www.springlabs.com" target="_blank">Spring Labs</a>
-              <span class="company-sub-title">(Springcoin, Inc.)</span>
-
-            </div>
-            <small class="tags">[Remote]</small>
-          </div>
-          <div class="location">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Marina Del Rey, CA</span>
-          </div>
-        </div>
-        <div class="items">
-          <div class="row">
-            <div class="role">
-              <span>Senior Full-Stack Software Engineer</span>
-            </div>
-            <div class="date">
-              <span>Aug 2021 - Present</span>
-            </div>
-          </div>
-          <div class="description markdown">
-            <ul>
-  <li>Develop a range of innovative products across various tech stacks, including:
-    <ul>
-      <li>A management platform tailored for financial technology organizations and banks</li>
-      <li>A novel role-based access control (RBAC) data tokenization platform focused on data security and compliance</li>
-      <li>A blockchain-based digital identity “passport” platform</li>
-    </ul>
-  </li>
-  <li>Collaborate closely with product team to plan new features and draft technical specifications</li>
-  <li>Partner with compliance teams to ensure application security and regulatory adherence</li>
-  <li>Execute agile development cycles and optimizing team productivity while ensuring product quality and timely delivery</li>
-  <li>Conduct daily code reviews</li>
-  <li>Coordinate and manage releases and deployments</li>
-  <li>Manage software dependencies to maintain security standards and ensure license compliance</li>
-  <li>Streamline development environments to improve team productivity and elevate code quality</li>
-</ul>
-
-          </div>
-          <div class="row">
-            <div class="role">
-              <span>InfoSec Engineer & System Administrator</span>
-            </div>
-            <div class="date">
-              <span>Jan 2023 - Present</span>
-            </div>
-          </div>
-          <div class="description markdown">
-            <ul>
-  <li>Lead architectural design reviews to embed security best practices into core development and infrastructure</li>
-  <li>Conduct security-focused code reviews to identify and mitigate vulnerabilities early</li>
-  <li>Contribute to the seamless execution of regulatory audits, including SOC 2, and the implementation of corresponding internal policies</li>
-  <li>Oversee security reviews for releases and deployments, ensuring compliance with company policies and industry standards</li>
-  <li>Evaluate third-party vendors and dependencies for adherence to security practices, reducing external risks</li>
-  <li>Direct and manage vendor penetration testing projects coordinating efforts to identify and address critical vulnerabilities</li>
-  <li>Administer and monitor internal devices for compliance with company security policies, maintaining a secure and compliant environment</li>
-  <li>Conduct internal audits of software engineering and IT systems to enforce security best practices, assess risk management protocols, and track security defects</li>
-</ul>
-
-          </div>
-        </div>
-
-      </div>
-      <div class="item">
-        <div class="row">
-          <div>
-            <div class="company">
-              <a href="https://www.icemortgagetechnology.com" target="_blank">Black Knight, Inc.</a>
-
-            </div>
-          </div>
-          <div class="location">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Denver, CO & Jacksonville, FL</span>
-          </div>
-        </div>
-        <div class="items">
-          <div class="row">
-            <div class="role">
-              <span>Senior Applications Programmer</span>
-            </div>
-            <div class="date">
-              <span>Jun 2016 - Aug 2021</span>
-            </div>
-          </div>
-          <div class="description markdown">
-            <p>Black Knight Financial Services (eventually Black Knight, Inc. in 2017) acquires Motivity Solutions, LLC.</p>
-<ul>
-  <li>Oversaw the maintenance and enhancement of a variety of enterprise applications across multiple layers
-    <ul>
-      <li>Front-end (web and mobile), server-side APIs, identity, service, and database layers, and integrations with data ingestion pipelines and platforms like Apple and Google for mobile features</li>
-    </ul>
-  </li>
-  <li>Led and mentored a team of full-stack engineers, providing architectural guidance and solutions</li>
-  <li>Coordinated and guided an offshore development team based in India to ensure alignment with project goals and quality standards</li>
-  <li>Set technical direction for the team, ensuring cohesive solutions that support both current and future application needs</li>
-</ul>
-
-          </div>
-        </div>
-
-      </div>
-      <div class="item">
-        <div class="row">
-          <div>
-            <div class="company">
-              <span>Motivity Solutions, LLC</span>
-
-            </div>
-          </div>
-          <div class="location">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Denver, CO</span>
-          </div>
-        </div>
-        <div class="items">
-          <div class="row">
-            <div class="role">
-              <span>Software Engineer & Developer</span>
-            </div>
-            <div class="date">
-              <span>Jan 2015 - Jun 2016</span>
-            </div>
-          </div>
-          <div class="description markdown">
-            <ul>
-  <li>Collaborated with fellow full-stack engineers to support architectural planning, design, and implementation of solutions for sophisticated product features</li>
-  <li>Contributed to the maintenance and enhancement of Movation, a mortgage-lender-focused business intelligence (BI) platform</li>
-  <li>Partnered closely with team members to align development efforts with project goals and quality standards, supporting clear communication and smooth project workflows</li>
-  <li>Assisted in implementing technical strategies that ensure cohesive, scalable solutions for current and future application needs.</li>
-</ul>
-
-          </div>
-          <div class="row">
-            <div class="role">
-              <span>Implementations and Extract, Transform, Load (ETL) Engineer</span>
-            </div>
-            <div class="date">
-              <span>Aug 2014 - Dec 2015</span>
-            </div>
-          </div>
-          <div class="description markdown">
-            <p>Within a year, I advanted into a technical role that was better aligned with my skill set and expertise.</p>
-<ul>
-  <li>Designed, built, and maintained custom data integrations, prioritizing accuracy, reliability, resilience, and operational efficiency to meet high standards in data handling and transfer</li>
-  <li>Leveraged a range of tools, including SQL and proprietary software, to develop robust integration solutions tailored to client requirements</li>
-  <li>Ensured data integrity and minimized downtime through proactive monitoring, error handling, and optimization techniques</li>
-  <li>Collaborated with cross-functional teams to refine integration processes, improving overall data flow and system performance</li>
-</ul>
-
-          </div>
-          <div class="row">
-            <div class="role">
-              <span>Client Services Lead & Project Coordinator</span>
-            </div>
-            <div class="date">
-              <span>Jul 2013 - Jul 2014</span>
-            </div>
-          </div>
-          <div class="description markdown">
-            <ul>
-  <li>Led a team of project coordinators with a strong focus on maximizing client satisfaction, driving user adoption, and ensuring seamless project execution</li>
-  <li>Managed a large portfolio of clients, overseeing end-to-end implementation projects from initial planning through to successful deployment</li>
-  <li>Established project priorities and timelines to align with client goals, fostering strong client relationships and consistently meeting or exceeding expectations</li>
-  <li>Developed and implemented strategies to enhance client onboarding and user adoption, contributing to long-term client retention and success</li>
-</ul>
-
-          </div>
-        </div>
-
-      </div>
-      <div class="item">
-        <div class="row">
-          <div>
-            <div class="company">
-              <a href="https://www.avient.com" target="_blank">PolyOne Corporation</a>
-
-            </div>
-          </div>
-          <div class="location">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Clinton, TN & Dyersburg, TN</span>
-          </div>
-        </div>
-        <div class="items">
-          <div class="row">
-            <div class="role">
-              <span>Process Engineer & Programmable Logic Controllers (PLC) Programmer</span>
-            </div>
-            <div class="date">
-              <span>Jan 2012 - May 2013</span>
-            </div>
-          </div>
-          <div class="description markdown">
-            <ul>
-  <li>Developed and optimized PLC software and smart control systems to improve automation and efficiency</li>
-  <li>Defined compounding and extrusion processes by analyzing parameters and refining screw design, ensuring quality compliance</li>
-  <li>Worked with cross-functional teams to tailor processes to product requirements, aligning with technical and operational goals</li>
-  <li>Completed manufacturing improvement projects to reduce costs and increase quality control</li>
-</ul>
-
-          </div>
-        </div>
-
-      </div>
-      <div class="item">
-        <div class="row">
-          <div>
-            <div class="company">
-              <span>The University of Tennessee Civil and Environmental Engineering Department</span>
-
-            </div>
-            <small class="tags">[Part-time]</small>
-          </div>
-          <div class="location">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Knoxville, TN</span>
-          </div>
-        </div>
-        <div class="items">
-          <div class="row">
-            <div class="role">
-              <span>Research Assistant</span>
-            </div>
-            <div class="date">
-              <span>Sep 2009 - Nov 2011</span>
-            </div>
-          </div>
-          <div class="description markdown">
-            <ul>
-  <li>Conducted postdoctoral research focused on developing innovative and energy-efficient processes for expanding polymers</li>
-  <li>Explored alternative materials and methods to reduce environmental impact while maintaining performance and cost-effectiveness</li>
-</ul>
-
-          </div>
-        </div>
-
-      </div>
-      <div class="item">
-        <div class="row">
-          <div>
-            <div class="company">
-              <a href="https://www.coastwatch.org" target="_blank">Coastwatch Europe</a>
-
-            </div>
-          </div>
-          <div class="location">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Dublin, Ireland</span>
-          </div>
-        </div>
-        <div class="items">
-          <div class="row">
-            <div class="role">
-              <span>Research Intern</span>
-            </div>
-            <div class="date">
-              <span>May 2009 - Aug 2009</span>
-            </div>
-          </div>
-          <div class="description markdown">
-            <ul>
-  <li>Surveyed coastlines to evaluate biodiversity, pollution, damage, and erosion</li>
-  <li>Analyzed data and performed statistical evaluations to inform environmental policies</li>
-  <li>Collaborated with the Ireland Environment Protection Agency (EPA) to present findings and providing actionable insights</li>
-</ul>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="skill" style="order: 2">
-  <div class="section-title">
-    <i class="section-icon fa-solid fa-toolbox"></i>
-    <h2>Skills</h2>
-  </div>
-
-  <div class="section-content">
-    <div class="groups">
-      <div class="group">
-        <div class="group-name">
-          <span>Languages</span>
-        </div>
-        <div class="group-item">
-          <span>Python</span>
-          <span>TypeScript</span>
-          <span>JavaScript</span>
-          <span>Shell (Bash)</span>
-          <span>SQL</span>
-          <span>C#</span>
-          <span>Java</span>
-          <span>Rust</span>
-          <span>C++</span>
-          <span>C</span>
-          <span>Solidity</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>XML</span>
-        </div>
-      </div>
-      <div class="group">
-        <div class="group-name">
-          <span>Frameworks & Runtimes</span>
-        </div>
-        <div class="group-item">
-          <span>Flask</span>
-          <span>React</span>
-          <span>NextJS</span>
-          <span>Angular</span>
-          <span>Node.js</span>
-          <span>WebAssembly</span>
-          <span>.NET</span>
-          <span>Jest</span>
-          <span>Vite</span>
-          <span>Webpack</span>
-          <span>Redux & NgRx</span>
-          <span>Redis</span>
-          <span>nginx</span>
-          <span>Apache</span>
-        </div>
-      </div>
-      <div class="group">
-        <div class="group-name">
-          <span>Technologies & Patterns</span>
-        </div>
-        <div class="group-item">
-          <span>Git</span>
-          <span>Continuous Integration & Continuous Deliver (CI/CD)</span>
-          <span>AWS platform & services</span>
-          <span>Terraform</span>
-          <span>Serverless</span>
-          <span>GitHub Actions</span>
-          <span>Docker</span>
-          <span>Authentication (OAuth, OIDC, SAML)</span>
-          <span>Build systems (Make, CMake)</span>
-        </div>
-      </div>
-      <div class="group">
-        <div class="group-name">
-          <span>Security</span>
-        </div>
-        <div class="group-item">
-          <span>Penetration Testing</span>
-          <span>Software Security</span>
-          <span>Information Security</span>
-          <span>Secure Software Development Lifecycle (SDLC)</span>
-          <span>Vulnerability Assessment</span>
-          <span>Risk Management</span>
-          <span>Encryption</span>
-          <span>Cloud Security</span>
-          <span>Threat Modeling</span>
-          <span>DevSecOps</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="education" style="order: 5">
-  <div class="section-title">
-    <i class="section-icon fa-solid fa-user-graduate"></i>
-    <h2>Education</h2>
-  </div>
-
-  <div class="section-content">
-    <div class="items">
-      <div class="item">
-        <div class="row">
-          <div class="institution">
-            <a href="https://ritchieschool.du.edu/academics-education/gr-programs/ms-cybersecurity" target="_blank">
-              <span>University of Denver</span>
-              <small>[Richie School of Engineering & Computer Science]</small>
-            </a>
-          </div>
-          <div class="degree">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <span>Master</span>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="major">
-            <span>Cybersecurity</span>
-          </div>
-          <div class="date">
-            <span>2020 - 2022</span>
-          </div>
-        </div>
-        <div class="description markdown">
-          <ul>
-  <li>Gained in-depth, hands-on experience across key cybersecurity domains, including programming and advanced threat mitigation techniques</li>
-  <li>Improved leadership abilities to effectively address complex cybersecurity challenges</li>
-</ul>
-
-        </div>
-
-      </div>
-      <div class="item">
-        <div class="row">
-          <div class="institution">
-            <a href="https://cbe.utk.edu/undergraduate/chemical-engineering/" target="_blank">
-              <span>The University of Tennessee, Knoxville</span>
-              <small>[Tickle College of Engineering]</small>
-            </a>
-          </div>
-          <div class="degree">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <span>Bachelor</span>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="major">
-            <span>Chemical Engineering</span>
-            <small>[Minor, Business]</small>
-          </div>
-          <div class="date">
-            <span>2007 - 2011</span>
-          </div>
-        </div>
-        <div class="description markdown">
-          <ul>
-  <li>Broadened general engineering studies with postdoctoral research for innovative, energy-efficient, and eco-friendly polymer research</li>
-  <li>Studied abroad, surveying and analyzing coastlines to assess biological diversity, pollution, environmental damage, and erosion, contributing auxiliary data for the creation of environmental policies</li>
-</ul>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="certificate" style="order: 7">
-  <div class="section-title">
-    <i class="section-icon fa-solid fa-certificate"></i>
-    <h2>Certificates</h2>
-  </div>
-
-  <div class="section-content">
-    <div class="items">
-      <div class="item">
-        <div class="row">
-          <div class="certificate-name">
-            <span>Certified SAFe 5 Practitioner</span>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="issuer">
-            <span>Scaled Agile, Inc.</span>
-          </div>
-          <div class="date">
-            <span>2020</span>
-          </div>
-        </div>
-        <div class="description markdown">
-          <p>Pass</p>
-
-        </div>
-
-      </div>
-      <div class="item">
-        <div class="row">
-          <div class="certificate-name">
-            <span>Microsoft SQL Server 2012 (Microsoft Exam 70-461)</span>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="issuer">
-            <span>Microsoft Corporation</span>
-          </div>
-          <div class="date">
-            <span>2015</span>
-          </div>
-        </div>
-        <div class="description markdown">
-          <p>Pass</p>
-
-        </div>
-
-      </div>
-      <div class="item">
-        <div class="row">
-          <div class="certificate-name">
-            <span>Tennessee Fundamentals of Engineering (FE) Exam for Chemical Engineers</span>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="issuer">
-            <span>Tennessee State Board of Architectural and Engineering Examiners</span>
-          </div>
-          <div class="date">
-            <span>2011</span>
-          </div>
-        </div>
-        <div class="description markdown">
-          <p>Pass</p>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section
-  class="publication"
-  style="order: 6"
->
-  <div class="section-title">
-    <i class="section-icon fa-solid fa-newspaper"></i>
-    <h2>Publications</h2>
-  </div>
-
-  <div class="section-content">
-    <div class="items">
-      <div class="item">
-        <div class="publication-title">
-          <a href="https://www.researchgate.net/publication/359514971_Can_Johnny_Really_be_Anonymous_Evaluation_of_User_Data_Privacy_Within_Tor" target="_blank">Can Johnny Really be Anonymous? Evaluation of User Data Privacy Within Tor</a>
-        </div>
-        <div class="authors">
-          <span>Sean Meek, Ivan Rodriguez Holguin, Sanchari Das</span>
-        </div>
-        <div class="conference">
-          <span>Sixth Workshop on Technology and Consumer Protection, 2022 (ConPro '22)</span>
-        </div>
-        <div class="conference-sub-title">
-          <small>Co-located with the 43th IEEE Symposium on Security and Privacy</small>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="organization" style="order: 10">
-  <div class="section-title">
-    <i class="section-icon fa-solid fa-house-user"></i>
-    <h2>Organizations</h2>
-  </div>
-
-  <div class="section-content">
-    <div class="items">
-      <div class="item">
-        <div class="row">
-          <div class="institution">
-            <a href="https://www.bgcmd.org" target="_blank">
-              <span>Boys and Girls Club of Metro Denver</span>
-            </a>
-          </div>
-          <div class="date">
-            <span>2024</span>
-          </div>
-        </div>
-        <div class="description markdown">
-          <ul>
-  <li>STEM Specialist Activity Instructor</li>
-  <li>Volunteer</li>
-</ul>
-
-        </div>
-
-      </div>
-      <div class="item">
-        <div class="row">
-          <div class="institution">
-            <a href="https://www.brentsplace.org" target="_blank">
-              <span>Brent's Place</span>
-            </a>
-          </div>
-          <div class="date">
-            <span>2013 - 2018</span>
-          </div>
-        </div>
-        <div class="description markdown">
-          <ul>
-  <li>Executive Leadership Committee Member</li>
-  <li>Fundraising Event Planner</li>
-  <li>Volunteer</li>
-</ul>
-
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<section class="interest" style="order: 12">
-  <div class="section-title">
-    <i class="section-icon fa-solid fa-hand-spock"></i>
-    <h2>Hobbies & Interests</h2>
-  </div>
-
-  <div class="section-content">
-    <div class="items">
-      <div class="item">
-        <span>Making & hacking</span>
-      </div>
-      <div class="item">
-        <span>Scuba diving</span>
-      </div>
-      <div class="item">
-        <span>Skiing</span>
-      </div>
-      <div class="item">
-        <span>Mountain biking</span>
-      </div>
-      <div class="item">
-        <span>Travel</span>
-      </div>
-      <div class="item">
-        <span>Live music</span>
-      </div>
-      <div class="item">
-        <span>My dogs</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-    </div>
-  </body>
 </html>
-
-

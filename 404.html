@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  
+  <title>404</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://novos.onl/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://novos.onl/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://novos.onl/img/apple-touch-icon.png">
+  <style>
+  /* mulish-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Mulish";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/font/mulish-v13-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* short-stack-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Short Stack";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/font/short-stack-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* caudex-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Caudex";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/font/caudex-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "Hack Nerd Font Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/font/HackNerdFontMono-Regular.woff2") format("woff2");
+  }
+</style>
+
+  <style>
+  /* light mode colors */
+  body {
+    --primary-color: #5871a2;
+    --primary-pale-color: #5871a233;
+    --primary-decoration-color: #a8a29e10;
+    --highlight-mark-color: #5f75b020;
+    --bg-color: #fafaf9;
+    --text-color: #44403c;
+    --text-pale-color: #78716c;
+    --text-decoration-color: #a8a29e;
+
+    --callout-note-color: #5871a2;
+    --callout-tip-color: #065f46;
+    --callout-important-color: #7c3aed;
+    --callout-warning-color: #d97706;
+    --callout-caution-color: #e11d48;
+  }
+
+  /* dark mode colors */
+  body.dark {
+    --primary-color: #6f8fd1;
+    --primary-pale-color: #6f8fd166;
+    --primary-decoration-color: #a8a29e10;
+    --bg-color: #1c1917;
+    --text-color: #d6d3d1;
+    --text-pale-color: #a8a29e;
+    --text-decoration-color: #57534e;
+    --highlight-mark-color: #8296cb3b;
+
+    --callout-note-color: #6f8fd1;
+    --callout-tip-color: #10b981;
+    --callout-important-color: #9333ea;
+    --callout-warning-color: #d97706;
+    --callout-caution-color: #e11d48;
+  }
+
+  /* typography */
+  body {
+    --main-font: "Mulish", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --script-font: "Short Stack";
+    --code-font: "Hack Nerd Font Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --homepage-max-width: 768px;
+    --main-max-width: 768px;
+    --avatar-size: 60px;
+    --font-size: 16px;
+    --line-height: 1.75;
+    --img-border-radius: 0px;
+    --detail-border-radius: 0px;
+    --dark-mode-img-brightness: 0.75;
+    --dark-mode-chart-brightness: 0.75;
+    --inline-code-border-radius: 2px;
+    --inline-code-bg-color: var(--primary-decoration-color);
+    --block-code-border-radius: 0px;
+    --block-code-border-color: var(--text-decoration-color);
+    --detail-border-color: var(--text-decoration-color);
+  }
+</style>
+
+  <link rel="stylesheet" href="https://novos.onl/main.css">
+  
+  <script>
+  console.debug("Commit Hash: 158198534df27aedea2cf67befa41028562939ef");
+</script>
+
+
+<script
+  defer
+  src="https://novos.onl/js/script.js"
+  data-website-id="fae0b8e4-0772-4825-be59-b51b6ea076bc"
+  data-host-url="https:&#x2F;&#x2F;novos.onl"
+></script>
+
+
+</head>
+
+<body class="not-found">
+  
+  <script>
+    const theme = sessionStorage.getItem('theme');
+    const match = window.matchMedia("(prefers-color-scheme: dark)").matches
+    if ((theme && theme == 'dark') || (!theme && match)) {
+      document.body.classList.add('dark');
+      const hl = document.querySelector('link#hl');
+      if (hl) hl.href = 'https://novos.onl/hl-dark.css';
+    }
+  </script>
+  
+  
+<div class="wrapper">
+  <p class="error">
+    404 :(
+  </p>
+  <a class="instant" href="https://novos.onl">Home</a>
+</div>
+
+  
+  <script src="https://novos.onl/js/main.js"></script>
+</body>
+
+</html>
