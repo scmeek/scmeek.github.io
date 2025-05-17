@@ -101,29 +101,40 @@
     --font-size: 16px;
     --line-height: 1.75;
     --img-border-radius: 0px;
-    --detail-border-radius: 0px;
+    --detail-border-radius: 2px;
     --dark-mode-img-brightness: 0.75;
     --dark-mode-chart-brightness: 0.75;
     --inline-code-border-radius: 2px;
     --inline-code-bg-color: var(--primary-decoration-color);
-    --block-code-border-radius: 0px;
+    --block-code-border-radius: 2px;
     --block-code-border-color: var(--text-decoration-color);
     --detail-border-color: var(--text-decoration-color);
+    --callout-border-radius: 2px;
   }
 </style>
 
   <link rel="stylesheet" href="https://novos.onl/main.css">
   
   <script>
-  console.log(`%c ____   ___ _   _ ___   ___ 
-|  _ \\ / _ \\ | | / _ \\ /___)
-| | | | |_| \\ V / |_| |___ |
-|_| |_|\\___/ \\_/ \\___/(___/`,
-  "color: blue; font-family: monospace;"
-);
+  console.log(
+    `%c\ \n\
+    .____   ___ _   _ ___   ___ \n\
+    |  _ \\ / _ \\ | | / _ \\ /___)\n\
+    | | | | |_| \\ V / |_| |___ |\n\
+    |_| |_|\\___/ \\_/ \\___/(___/`
+      .split('\n')
+      .map((line) => line.trim())
+      .join('\n'),
+    "color: blue; font-family: monospace;"
+  );
 
-  console.debug("Commit Hash: b9f40a8308564388480497c9ed0d7f92702204a0");
+  console.debug("Commit Hash: a5dd7d3b19d6726b4f5d37ab66b57a023a1709b1");
 </script>
+
+<script
+  defer
+  src="https://novos.onl/js/accordion.js"
+></script>
 
 
 <script
