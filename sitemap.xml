@@ -7,12 +7,22 @@
         <loc>https://novos.onl/about/</loc>
     </url>
     <url>
-        <loc>https://novos.onl/blog/</loc>
-    </url>
-    <url>
         <loc>https://novos.onl/categories/</loc>
     </url>
     <url>
+        <loc>https://novos.onl/posts/</loc>
+    </url>
+    <url>
+        <loc>https://novos.onl/posts/2025/hello-universe/</loc>
+        <lastmod>2025-10-05</lastmod>
+    </url>
+    <url>
         <loc>https://novos.onl/tags/</loc>
+    </url>
+    <url>
+        <loc>https://novos.onl/tags/hello-world/</loc>
+    </url>
+    <url>
+        <loc>https://novos.onl/tags/novos/</loc>
     </url>
 </urlset>
