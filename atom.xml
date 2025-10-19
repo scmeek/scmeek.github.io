@@ -24,6 +24,7 @@
         <id>https://novos.onl/posts/2025/hello-universe/</id>
         
         <content type="html" xml:base="https://novos.onl/posts/2025/hello-universe/">
+
   
   
   
@@ -37,7 +38,8 @@
          width=&quot;830&quot;
     &gt;
     
-    &lt;figcaption&gt;Hello Universe&lt;&#x2F;figcaption&gt;
+    &lt;figcaption&gt;&lt;p&gt;Hello Universe&lt;&#x2F;p&gt;
+&lt;&#x2F;figcaption&gt;
     
 &lt;&#x2F;figure&gt;
 &lt;h1 id=&quot;greetings-alien&quot;&gt;Greetings 👽&lt;&#x2F;h1&gt;
