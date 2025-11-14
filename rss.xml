@@ -7,7 +7,110 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://novos.onl/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Sun, 05 Oct 2025 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Fri, 14 Nov 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Introducing a Best-Practices Rust Workspace GitHub Template</title>
+          <pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://novos.onl/posts/2025/rust-workspace-github-template/</link>
+          <guid>https://novos.onl/posts/2025/rust-workspace-github-template/</guid>
+          <description xml:base="https://novos.onl/posts/2025/rust-workspace-github-template/">
+
+  
+  
+
+
+&lt;figure&gt;
+    &lt;img
+        src=&quot;https:&amp;#x2F;&amp;#x2F;novos.onl&amp;#x2F;processed_images&amp;#x2F;rust-workspace-github-template-transparent.e22f63a05e1c3801.png&quot;
+         alt=&quot;Rust workspace template interpretation&quot;
+        
+         width=&quot;830&quot;
+    &gt;
+    
+    &lt;figcaption&gt;&lt;p&gt;An artist&#x27;s&lt;sup&gt;[1]&lt;&#x2F;sup&gt; interpretation of a Rust workspace template.&lt;&#x2F;p&gt;
+&lt;&#x2F;figcaption&gt;
+    
+&lt;&#x2F;figure&gt;
+&lt;h1 id=&quot;tl-dr&quot;&gt;tl;dr&lt;&#x2F;h1&gt;
+&lt;p&gt;I&#x27;ve created a &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;scmeek&#x2F;rust-workspace-github-template&quot;&gt;Rust workspace GitHub template&lt;&#x2F;a&gt; that has best practices implementations and scaffolding with as few &quot;opinions&quot; as reasonable. It&#x27;s intended to be near-zero effort to get up and going and is scalable.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;As I get further involved with Rust development both personally and professionally - I&#x27;ve found I need an easy way to onboard new projects with best-practices as &quot;batteries included&quot;. Rust (and cargo) already do an incredible job of bringing modern software practices into development and tooling. I needed a template that enforced these and has base implementations (or scaffolding) for &lt;em&gt;most&lt;&#x2F;em&gt; libraries and applications. I&#x27;ll certainly be using it for my Rust projects and I hope that it&#x27;s a help for you too!&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;features&quot;&gt;Features&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Only Rust- or cargo-ecosystem tooling&lt;&#x2F;li&gt;
+&lt;li&gt;Robust Continuous Integration (CI)
+&lt;ul&gt;
+&lt;li&gt;Fast and parallel&lt;&#x2F;li&gt;
+&lt;li&gt;Dependency auditing
+&lt;ul&gt;
+&lt;li&gt;Unused dependencies&lt;&#x2F;li&gt;
+&lt;li&gt;Vulnerability checks&lt;&#x2F;li&gt;
+&lt;li&gt;Licenses&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Static analysis for security and auditing
+&lt;ul&gt;
+&lt;li&gt;via &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zizmorcore&#x2F;zizmor&quot;&gt;zizmor&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Local development matches as much as possible&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Strict workspace-wide linting configuration for safety&lt;&#x2F;li&gt;
+&lt;li&gt;Automatic versioning and releasing
+&lt;ul&gt;
+&lt;li&gt;Commits should adhere to &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.conventionalcommits.org&#x2F;&quot;&gt;Conventional Commits&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;release-plz&#x2F;release-plz&quot;&gt;&lt;code&gt;release-plz&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Modern and fast testing
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;nexte.st&quot;&gt;&lt;code&gt;nextest&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;taiki-e&#x2F;cargo-llvm-cov&quot;&gt;&lt;code&gt;cargo-llvm-cov&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; for coverage&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Benchmarking
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;criterion&#x2F;latest&#x2F;criterion&#x2F;&quot;&gt;&lt;code&gt;criterion&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;GitHub templates
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CODEOWNERS&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Dependabot&lt;&#x2F;li&gt;
+&lt;li&gt;Pull request template&lt;&#x2F;li&gt;
+&lt;li&gt;Bug report template&lt;&#x2F;li&gt;
+&lt;li&gt;Feature request template&lt;&#x2F;li&gt;
+&lt;li&gt;Security policy&lt;&#x2F;li&gt;
+&lt;li&gt;Code of conduct&lt;&#x2F;li&gt;
+&lt;li&gt;Contributing guidelines&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Sensible default dependencies&lt;&#x2F;li&gt;
+&lt;li&gt;Project defaults
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;LICENSE&lt;&#x2F;code&gt; file&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;technologies&quot;&gt;Technologies&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cargo&lt;&#x2F;code&gt; for all Rust project functions, naturally&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;Make&lt;&#x2F;code&gt; as interface for project actions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;assumptions&quot;&gt;Assumptions&lt;&#x2F;h2&gt;
+&lt;p&gt;The template uses &lt;code&gt;release-plz&lt;&#x2F;code&gt; for version control and releasing. It requires &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;http:&#x2F;&#x2F;conventionalcommits.org&quot;&gt;Conventional Commits&lt;&#x2F;a&gt; for commit messages to know how to bump the version (using &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;semver.org&quot;&gt;Semantic Versioning&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;The template assumes that &lt;code&gt;main&lt;&#x2F;code&gt; will be the default git branch.&lt;&#x2F;p&gt;
+&lt;p&gt;This template has been tested for local dev using &lt;code&gt;macOS&lt;&#x2F;code&gt;. Other operating systems may work or could easily be extended to include them.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;future&quot;&gt;Future&lt;&#x2F;h1&gt;
+&lt;p&gt;I&#x27;ll continually be updating this template as I use it and new best practices come out. All feedback is welcome (PRs preferred) and I certainly hope you will contribute too.&lt;&#x2F;p&gt;
+&lt;p&gt;cheers -&lt;br &#x2F;&gt;
+scm&lt;&#x2F;p&gt;
+&lt;span class=&quot;afterthought&quot;&gt;&lt;sup&gt;[1]&lt;&#x2F;sup&gt;The artist is an AI. Surprise.&lt;br&gt;
+The images in this post were generated by AI and reviewed by a human.&lt;&#x2F;span&gt;
+</description>
+      </item>
       <item>
           <title>Hello Universe</title>
           <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
@@ -16,7 +119,6 @@
           <guid>https://novos.onl/posts/2025/hello-universe/</guid>
           <description xml:base="https://novos.onl/posts/2025/hello-universe/">
 
-  
   
   
 
