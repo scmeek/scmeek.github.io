@@ -13,111 +13,91 @@
         <updated>2025-11-14T00:00:00+00:00</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://novos.onl/posts/2025/rust-workspace-github-template/"/>
         <id>https://novos.onl/posts/2025/rust-workspace-github-template/</id>
         
-        <content type="html" xml:base="https://novos.onl/posts/2025/rust-workspace-github-template/">
-
-  
-  
-
-
-&lt;figure&gt;
-    &lt;img
-        src=&quot;https:&amp;#x2F;&amp;#x2F;novos.onl&amp;#x2F;processed_images&amp;#x2F;rust-workspace-github-template-transparent.e22f63a05e1c3801.png&quot;
-         alt=&quot;Rust workspace template interpretation&quot;
-        
-         width=&quot;830&quot;
-    &gt;
-    
-    &lt;figcaption&gt;&lt;p&gt;An artist&#x27;s&lt;sup&gt;[1]&lt;&#x2F;sup&gt; interpretation of a Rust workspace template.&lt;&#x2F;p&gt;
-&lt;&#x2F;figcaption&gt;
-    
-&lt;&#x2F;figure&gt;
-&lt;h1 id=&quot;tl-dr&quot;&gt;tl;dr&lt;&#x2F;h1&gt;
-&lt;p&gt;I&#x27;ve created a &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;scmeek&#x2F;rust-workspace-github-template&quot;&gt;Rust workspace GitHub template&lt;&#x2F;a&gt; that has best practices implementations and scaffolding with as few &quot;opinions&quot; as reasonable. It&#x27;s intended to be near-zero effort to get up and going and is scalable.&lt;&#x2F;p&gt;
-&lt;hr &#x2F;&gt;
-&lt;p&gt;As I get further involved with Rust development both personally and professionally - I&#x27;ve found I need an easy way to onboard new projects with best-practices as &quot;batteries included&quot;. Rust (and cargo) already do an incredible job of bringing modern software practices into development and tooling. I needed a template that enforced these and has base implementations (or scaffolding) for &lt;em&gt;most&lt;&#x2F;em&gt; libraries and applications. I&#x27;ll certainly be using it for my Rust projects and I hope that it&#x27;s a help for you too!&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;features&quot;&gt;Features&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://novos.onl/posts/2025/rust-workspace-github-template/">&lt;figure&gt;
+&lt;img src=&quot;/img/2025/rust-workspace-github-template-transparent.png&quot; alt=&quot;Rust workspace template interpretation&quot; height=&quot;467&quot; width=&quot;830&quot;&gt;&lt;figcaption&gt;&lt;p&gt;An artist&#39;s&lt;sup&gt;[1]&lt;/sup&gt; interpretation of a Rust workspace template.&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;tl-dr&quot;&gt;tl;dr&lt;/h1&gt;
+&lt;p&gt;I&#39;ve created a &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/scmeek/rust-workspace-github-template&quot;&gt;Rust workspace GitHub template&lt;/a&gt; that has best practices implementations and scaffolding with as few &quot;opinions&quot; as reasonable. It&#39;s intended to be near-zero effort to get up and going and is scalable.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;As I get further involved with Rust development both personally and professionally - I&#39;ve found I need an easy way to onboard new projects with best-practices as &quot;batteries included&quot;. Rust (and cargo) already do an incredible job of bringing modern software practices into development and tooling. I needed a template that enforced these and has base implementations (or scaffolding) for &lt;em&gt;most&lt;/em&gt; libraries and applications. I&#39;ll certainly be using it for my Rust projects and I hope that it&#39;s a help for you too!&lt;/p&gt;
+&lt;h1 id=&quot;features&quot;&gt;Features&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Only Rust- or cargo-ecosystem tooling&lt;&#x2F;li&gt;
+&lt;li&gt;Only Rust- or cargo-ecosystem tooling&lt;/li&gt;
 &lt;li&gt;Robust Continuous Integration (CI)
 &lt;ul&gt;
-&lt;li&gt;Fast and parallel&lt;&#x2F;li&gt;
+&lt;li&gt;Fast and parallel&lt;/li&gt;
 &lt;li&gt;Dependency auditing
 &lt;ul&gt;
-&lt;li&gt;Unused dependencies&lt;&#x2F;li&gt;
-&lt;li&gt;Vulnerability checks&lt;&#x2F;li&gt;
-&lt;li&gt;Licenses&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
+&lt;li&gt;Unused dependencies&lt;/li&gt;
+&lt;li&gt;Vulnerability checks&lt;/li&gt;
+&lt;li&gt;Licenses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Static analysis for security and auditing
 &lt;ul&gt;
-&lt;li&gt;via &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;zizmorcore&#x2F;zizmor&quot;&gt;zizmor&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Local development matches as much as possible&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Strict workspace-wide linting configuration for safety&lt;&#x2F;li&gt;
+&lt;li&gt;via &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/zizmorcore/zizmor&quot;&gt;zizmor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Local development matches as much as possible&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Strict workspace-wide linting configuration for safety&lt;/li&gt;
 &lt;li&gt;Automatic versioning and releasing
 &lt;ul&gt;
-&lt;li&gt;Commits should adhere to &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.conventionalcommits.org&#x2F;&quot;&gt;Conventional Commits&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;release-plz&#x2F;release-plz&quot;&gt;&lt;code&gt;release-plz&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
+&lt;li&gt;Commits should adhere to &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.conventionalcommits.org/&quot;&gt;Conventional Commits&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/release-plz/release-plz&quot;&gt;&lt;code&gt;release-plz&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Modern and fast testing
 &lt;ul&gt;
-&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;nexte.st&quot;&gt;&lt;code&gt;nextest&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;taiki-e&#x2F;cargo-llvm-cov&quot;&gt;&lt;code&gt;cargo-llvm-cov&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; for coverage&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://nexte.st&quot;&gt;&lt;code&gt;nextest&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/taiki-e/cargo-llvm-cov&quot;&gt;&lt;code&gt;cargo-llvm-cov&lt;/code&gt;&lt;/a&gt; for coverage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Benchmarking
 &lt;ul&gt;
-&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;criterion&#x2F;latest&#x2F;criterion&#x2F;&quot;&gt;&lt;code&gt;criterion&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://docs.rs/criterion/latest/criterion/&quot;&gt;&lt;code&gt;criterion&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;GitHub templates
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;CODEOWNERS&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Dependabot&lt;&#x2F;li&gt;
-&lt;li&gt;Pull request template&lt;&#x2F;li&gt;
-&lt;li&gt;Bug report template&lt;&#x2F;li&gt;
-&lt;li&gt;Feature request template&lt;&#x2F;li&gt;
-&lt;li&gt;Security policy&lt;&#x2F;li&gt;
-&lt;li&gt;Code of conduct&lt;&#x2F;li&gt;
-&lt;li&gt;Contributing guidelines&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;Sensible default dependencies&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;CODEOWNERS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Dependabot&lt;/li&gt;
+&lt;li&gt;Pull request template&lt;/li&gt;
+&lt;li&gt;Bug report template&lt;/li&gt;
+&lt;li&gt;Feature request template&lt;/li&gt;
+&lt;li&gt;Security policy&lt;/li&gt;
+&lt;li&gt;Code of conduct&lt;/li&gt;
+&lt;li&gt;Contributing guidelines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sensible default dependencies&lt;/li&gt;
 &lt;li&gt;Project defaults
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;LICENSE&lt;&#x2F;code&gt; file&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;technologies&quot;&gt;Technologies&lt;&#x2F;h2&gt;
+&lt;li&gt;&lt;code&gt;LICENSE&lt;/code&gt; file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;technologies&quot;&gt;Technologies&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;cargo&lt;&#x2F;code&gt; for all Rust project functions, naturally&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;Make&lt;&#x2F;code&gt; as interface for project actions&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;assumptions&quot;&gt;Assumptions&lt;&#x2F;h2&gt;
-&lt;p&gt;The template uses &lt;code&gt;release-plz&lt;&#x2F;code&gt; for version control and releasing. It requires &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;http:&#x2F;&#x2F;conventionalcommits.org&quot;&gt;Conventional Commits&lt;&#x2F;a&gt; for commit messages to know how to bump the version (using &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;semver.org&quot;&gt;Semantic Versioning&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
-&lt;p&gt;The template assumes that &lt;code&gt;main&lt;&#x2F;code&gt; will be the default git branch.&lt;&#x2F;p&gt;
-&lt;p&gt;This template has been tested for local dev using &lt;code&gt;macOS&lt;&#x2F;code&gt;. Other operating systems may work or could easily be extended to include them.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;future&quot;&gt;Future&lt;&#x2F;h1&gt;
-&lt;p&gt;I&#x27;ll continually be updating this template as I use it and new best practices come out. All feedback is welcome (PRs preferred) and I certainly hope you will contribute too.&lt;&#x2F;p&gt;
-&lt;p&gt;cheers -&lt;br &#x2F;&gt;
-scm&lt;&#x2F;p&gt;
-&lt;span class=&quot;afterthought&quot;&gt;&lt;sup&gt;[1]&lt;&#x2F;sup&gt;The artist is an AI. Surprise.&lt;br&gt;
-The images in this post were generated by AI and reviewed by a human.&lt;&#x2F;span&gt;
+&lt;li&gt;&lt;code&gt;cargo&lt;/code&gt; for all Rust project functions, naturally&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Make&lt;/code&gt; as interface for project actions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;assumptions&quot;&gt;Assumptions&lt;/h2&gt;
+&lt;p&gt;The template uses &lt;code&gt;release-plz&lt;/code&gt; for version control and releasing. It requires &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;http://conventionalcommits.org&quot;&gt;Conventional Commits&lt;/a&gt; for commit messages to know how to bump the version (using &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://semver.org&quot;&gt;Semantic Versioning&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The template assumes that &lt;code&gt;main&lt;/code&gt; will be the default git branch.&lt;/p&gt;
+&lt;p&gt;This template has been tested for local dev using &lt;code&gt;macOS&lt;/code&gt;. Other operating systems may work or could easily be extended to include them.&lt;/p&gt;
+&lt;h1 id=&quot;future&quot;&gt;Future&lt;/h1&gt;
+&lt;p&gt;I&#39;ll continually be updating this template as I use it and new best practices come out. All feedback is welcome (PRs preferred) and I certainly hope you will contribute too.&lt;/p&gt;
+&lt;p&gt;cheers -&lt;br /&gt;
+scm&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;afterthought&quot;&gt;&lt;sup&gt;[1]&lt;/sup&gt;The artist is an AI. Surprise.&lt;br&gt;
+The images in this post were generated by AI and reviewed by a human.&lt;/span&gt;&lt;/p&gt;
 </content>
         
     </entry>
@@ -127,44 +107,24 @@ The images in this post were generated by AI and reviewed by a human.&lt;&#x2F;s
         <updated>2025-10-05T00:00:00+00:00</updated>
         
         <author>
-          <name>
-            
-              Unknown
-            
-          </name>
+          <name>Unknown</name>
         </author>
         
         <link rel="alternate" type="text/html" href="https://novos.onl/posts/2025/hello-universe/"/>
         <id>https://novos.onl/posts/2025/hello-universe/</id>
         
-        <content type="html" xml:base="https://novos.onl/posts/2025/hello-universe/">
-
-  
-  
-
-
-&lt;figure&gt;
-    &lt;img
-        src=&quot;https:&amp;#x2F;&amp;#x2F;novos.onl&amp;#x2F;processed_images&amp;#x2F;hello-universe-transparent.ae8c54b4acedf480.png&quot;
-         alt=&quot;Hello Universe&quot;
-        
-         width=&quot;830&quot;
-    &gt;
-    
-    &lt;figcaption&gt;&lt;p&gt;Hello Universe&lt;&#x2F;p&gt;
-&lt;&#x2F;figcaption&gt;
-    
-&lt;&#x2F;figure&gt;
-&lt;h1 id=&quot;greetings-alien&quot;&gt;Greetings 👽&lt;&#x2F;h1&gt;
-&lt;p&gt;It is time to &lt;em&gt;finally&lt;&#x2F;em&gt; launch my personal website. This project is something I&#x27;ve wanted for quite some time and have been on-and-off working towards in the last year. I anticipate it being a somewhat sporadically-updated collection of tech discoveries, unique procedures, or undocumented behavior; side projects; personal anecdotes; and various general musings. Depending on how things go, I may host other content here as well.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;em&gt;There are many like it but this one is mine.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;novos&quot;&gt;Novos&lt;&#x2F;h1&gt;
-&lt;p&gt;Why &#x27;novos?&#x27; I&#x27;ve always liked creating new words for new concepts. &#x27;Novos&#x27; is the combination of &#x27;nova,&#x27; as in &#x27;supernova&#x27; or &#x27;hypernova,&#x27; and &#x27;-os,&#x27; as in &#x27;ethos&#x27; and &#x27;logos.&#x27; The notion is an energetic expansion of knowledge and reason, guided by curiosity and exploration. Maybe a bit silly but representative of where I see this project going.&lt;&#x2F;p&gt;
-&lt;h1 id=&quot;onward&quot;&gt;Onward&lt;&#x2F;h1&gt;
-&lt;p&gt;Feel free to leave a comment with your thoughts. I&#x27;d also love to hear from you on &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;novos.onl&quot;&gt;Bluesky&lt;&#x2F;a&gt;. Surely, there will be very little traffic as this project gets started so it&#x27;d be great to hear from you. I&#x27;ve got a few topics in the pipeline that I&#x27;m excited to share here.&lt;&#x2F;p&gt;
-&lt;p&gt;cheers -&lt;br &#x2F;&gt;
-scm&lt;&#x2F;p&gt;
-&lt;span class=&quot;afterthought&quot;&gt;The images in this post were generated by AI and reviewed by a human.&lt;&#x2F;span&gt;
+        <content type="html" xml:base="https://novos.onl/posts/2025/hello-universe/">&lt;figure&gt;
+&lt;img src=&quot;/img/2025/hello-universe-transparent.png&quot; alt=&quot;Hello Universe&quot; height=&quot;533&quot; width=&quot;830&quot;&gt;&lt;figcaption&gt;&lt;p&gt;Hello Universe&lt;/p&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;greetings-alien&quot;&gt;Greetings 👽&lt;/h1&gt;
+&lt;p&gt;It is time to &lt;em&gt;finally&lt;/em&gt; launch my personal website. This project is something I&#39;ve wanted for quite some time and have been on-and-off working towards in the last year. I anticipate it being a somewhat sporadically-updated collection of tech discoveries, unique procedures, or undocumented behavior; side projects; personal anecdotes; and various general musings. Depending on how things go, I may host other content here as well.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;There are many like it but this one is mine.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;novos&quot;&gt;Novos&lt;/h1&gt;
+&lt;p&gt;Why &#39;novos?&#39; I&#39;ve always liked creating new words for new concepts. &#39;Novos&#39; is the combination of &#39;nova,&#39; as in &#39;supernova&#39; or &#39;hypernova,&#39; and &#39;-os,&#39; as in &#39;ethos&#39; and &#39;logos.&#39; The notion is an energetic expansion of knowledge and reason, guided by curiosity and exploration. Maybe a bit silly but representative of where I see this project going.&lt;/p&gt;
+&lt;h1 id=&quot;onward&quot;&gt;Onward&lt;/h1&gt;
+&lt;p&gt;Feel free to leave a comment with your thoughts. I&#39;d also love to hear from you on &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://bsky.app/profile/novos.onl&quot;&gt;Bluesky&lt;/a&gt;. Surely, there will be very little traffic as this project gets started so it&#39;d be great to hear from you. I&#39;ve got a few topics in the pipeline that I&#39;m excited to share here.&lt;/p&gt;
+&lt;p&gt;cheers -&lt;br /&gt;
+scm&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;afterthought&quot;&gt;The images in this post were generated by AI and reviewed by a human.&lt;/span&gt;&lt;/p&gt;
 </content>
         
     </entry>
