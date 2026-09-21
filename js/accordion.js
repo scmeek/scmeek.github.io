@@ -1,6 +1,8 @@
 class Accordion {
   constructor(el) {
-    this.durationMs = 500;
+    this.durationMs = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? 0
+      : 260;
 
     this.el = el;
     this.summary = el.querySelector("summary");
@@ -83,6 +85,6 @@ class Accordion {
   }
 }
 
-document.querySelectorAll("details").forEach((el) => {
+document.querySelectorAll(".animated-details").forEach((el) => {
   new Accordion(el);
 });

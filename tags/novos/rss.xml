@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>novos - novos</title>
+      <link>https://novos.onl</link>
+      <description>Personal notes, projects, and observations by Sean Meek.</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://novos.onl/tags/novos/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 05 Oct 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Hello Universe</title>
+          <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://novos.onl/posts/2025/hello-universe/</link>
+          <guid>https://novos.onl/posts/2025/hello-universe/</guid>
+          <description xml:base="https://novos.onl/posts/2025/hello-universe/">&lt;h1 id=&quot;greetings-alien&quot;&gt;Greetings 👽&lt;/h1&gt;
+&lt;p&gt;It is time to &lt;em&gt;finally&lt;/em&gt; launch my personal website. This project is something I&#39;ve wanted for quite some time and have been on-and-off working towards in the last year. I anticipate it being a somewhat sporadically-updated collection of tech discoveries, unique procedures, or undocumented behavior; side projects; personal anecdotes; and various general musings. Depending on how things go, I may host other content here as well.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;There are many like it but this one is mine.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;novos&quot;&gt;novos&lt;/h1&gt;
+&lt;p&gt;Why &#39;novos?&#39; I&#39;ve always liked creating new words for new concepts. &#39;novos&#39; is the combination of &#39;nova,&#39; as in &#39;supernova&#39; or &#39;hypernova,&#39; and &#39;-os,&#39; as in &#39;ethos&#39; and &#39;logos.&#39; The notion is an energetic expansion of knowledge and reason, guided by curiosity and exploration. Maybe a bit silly but representative of where I see this project going.&lt;/p&gt;
+&lt;h1 id=&quot;onward&quot;&gt;Onward&lt;/h1&gt;
+&lt;p&gt;Feel free to leave a comment with your thoughts. Surely, there will be very little traffic as this project gets started so it&#39;d be great to hear from you. I&#39;ve got a few topics in the pipeline that I&#39;m excited to share here.&lt;/p&gt;
+&lt;p&gt;cheers -&lt;br /&gt;
+scm&lt;/p&gt;
+</description>
+      </item>
+    </channel>
+</rss>

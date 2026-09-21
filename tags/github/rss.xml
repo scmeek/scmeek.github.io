@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>novos - github</title>
+      <link>https://novos.onl</link>
+      <description>Personal notes, projects, and observations by Sean Meek.</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://novos.onl/tags/github/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 14 Nov 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Introducing a Best-Practices Rust Workspace GitHub Template</title>
+          <pubDate>Fri, 14 Nov 2025 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://novos.onl/posts/2025/rust-workspace-github-template/</link>
+          <guid>https://novos.onl/posts/2025/rust-workspace-github-template/</guid>
+          <description xml:base="https://novos.onl/posts/2025/rust-workspace-github-template/">&lt;h1 id=&quot;tl-dr&quot;&gt;tl;dr&lt;/h1&gt;
+&lt;p&gt;I&#39;ve created a &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/scmeek/rust-workspace-github-template&quot;&gt;Rust workspace GitHub template&lt;/a&gt; that has best practices implementations and scaffolding with as few &quot;opinions&quot; as reasonable. It&#39;s intended to be near-zero effort to get up and going and is scalable.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;As I get further involved with Rust development both personally and professionally - I&#39;ve found I need an easy way to onboard new projects with best-practices as &quot;batteries included&quot;. Rust (and cargo) already do an incredible job of bringing modern software practices into development and tooling. I needed a template that enforced these and has base implementations (or scaffolding) for &lt;em&gt;most&lt;/em&gt; libraries and applications. I&#39;ll certainly be using it for my Rust projects and I hope that it&#39;s a help for you too!&lt;/p&gt;
+&lt;h1 id=&quot;features&quot;&gt;Features&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Only Rust- or cargo-ecosystem tooling&lt;/li&gt;
+&lt;li&gt;Robust Continuous Integration (CI)
+&lt;ul&gt;
+&lt;li&gt;Fast and parallel&lt;/li&gt;
+&lt;li&gt;Dependency auditing
+&lt;ul&gt;
+&lt;li&gt;Unused dependencies&lt;/li&gt;
+&lt;li&gt;Vulnerability checks&lt;/li&gt;
+&lt;li&gt;Licenses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Static analysis for security and auditing
+&lt;ul&gt;
+&lt;li&gt;via &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/zizmorcore/zizmor&quot;&gt;zizmor&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Local development matches as much as possible&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Strict workspace-wide linting configuration for safety&lt;/li&gt;
+&lt;li&gt;Automatic versioning and releasing
+&lt;ul&gt;
+&lt;li&gt;Commits should adhere to &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.conventionalcommits.org/&quot;&gt;Conventional Commits&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/release-plz/release-plz&quot;&gt;&lt;code&gt;release-plz&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Modern and fast testing
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://nexte.st&quot;&gt;&lt;code&gt;nextest&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/taiki-e/cargo-llvm-cov&quot;&gt;&lt;code&gt;cargo-llvm-cov&lt;/code&gt;&lt;/a&gt; for coverage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Benchmarking
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://docs.rs/criterion/latest/criterion/&quot;&gt;&lt;code&gt;criterion&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;GitHub templates
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CODEOWNERS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Dependabot&lt;/li&gt;
+&lt;li&gt;Pull request template&lt;/li&gt;
+&lt;li&gt;Bug report template&lt;/li&gt;
+&lt;li&gt;Feature request template&lt;/li&gt;
+&lt;li&gt;Security policy&lt;/li&gt;
+&lt;li&gt;Code of conduct&lt;/li&gt;
+&lt;li&gt;Contributing guidelines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sensible default dependencies&lt;/li&gt;
+&lt;li&gt;Project defaults
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;LICENSE&lt;/code&gt; file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;technologies&quot;&gt;Technologies&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cargo&lt;/code&gt; for all Rust project functions, naturally&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Make&lt;/code&gt; as interface for project actions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;assumptions&quot;&gt;Assumptions&lt;/h2&gt;
+&lt;p&gt;The template uses &lt;code&gt;release-plz&lt;/code&gt; for version control and releasing. It requires &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;http://conventionalcommits.org&quot;&gt;Conventional Commits&lt;/a&gt; for commit messages to know how to bump the version (using &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://semver.org&quot;&gt;Semantic Versioning&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;The template assumes that &lt;code&gt;main&lt;/code&gt; will be the default git branch.&lt;/p&gt;
+&lt;p&gt;This template has been tested for local dev using &lt;code&gt;macOS&lt;/code&gt;. Other operating systems may work or could easily be extended to include them.&lt;/p&gt;
+&lt;h1 id=&quot;future&quot;&gt;Future&lt;/h1&gt;
+&lt;p&gt;I&#39;ll continually be updating this template as I use it and new best practices come out. All feedback is welcome (PRs preferred) and I certainly hope you will contribute too.&lt;/p&gt;
+&lt;p&gt;cheers -&lt;br /&gt;
+scm&lt;/p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
