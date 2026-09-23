@@ -29,11 +29,15 @@
       href="https://novos.onl/posts/rss.xml">
 
     
-    <title>Tags | novos</title>
-    <meta name="description" content="Browse articles by tags" />
-    <meta property="og:title" content="Tags | novos" />
-    <meta property="og:description" content="Browse articles by tags" />
+    <title>novos • Connect an Original Chromecast to a New Wi-Fi Network without Google Home</title>
+    <meta name="description" content="Personal notes, projects, and observations by Sean Meek." />
+    <meta property="og:title" content="novos • Connect an Original Chromecast to a New Wi-Fi Network without Google Home" />
+    <meta property="og:description" content="Personal notes, projects, and observations by Sean Meek." />
     <meta property="og:type" content="website" />
+
+    <meta property="og:image" content="https://novos.onl/img/2026/original-chromecast-connect-wifi.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://novos.onl/img/2026/original-chromecast-connect-wifi.png" />
 
 
   </head>
@@ -275,86 +279,49 @@
 </aside>
         <div class="content">
           
-<div class="categories-page">
-  <header class="page-header">
-    
-    <h1 class="page-title">Tags</h1>
-    <p class="page-description">
-      Browse articles organized by tag. Click on any tag to see related posts.
-    </p>
-    
-    <hr class="page-rule" />
+<article class="blog-post">
+  <header class="post-header">
+    <h1 class="post-title">Connect an Original Chromecast to a New Wi-Fi Network without Google Home</h1>
+    <div class="post-meta">
+      <span class="post-byline"><time class="post-date" datetime="2026-09-23">September 23, 2026</time><span class="post-author"> by Sean Meek</span></span>
+      <span class="post-reading-time">2 min read</span>
+      
+    </div>
+    <p class="post-excerpt">Extend the life of your Chromecast even if Google won&#39;t.</p>
   </header>
-
+  <figure class="post-hero"><img src="https://novos.onl/img/2026/original-chromecast-connect-wifi.png" alt="Connect an Original Chromecast to a New Wi-Fi Network without Google Home" /></figure>
   
-  
-  <div class="categories-grid">
-    
-    <div class="category-card">
-      <a href="https://novos.onl/tags/rust/" class="category-link">
-        <h2 class="category-title">rust</h2>
-        <p class="category-count">
-          1 article
-        </p>
-      </a>
-    </div>
-    
-    <div class="category-card">
-      <a href="https://novos.onl/tags/open-source/" class="category-link">
-        <h2 class="category-title">open-source</h2>
-        <p class="category-count">
-          1 article
-        </p>
-      </a>
-    </div>
-    
-    <div class="category-card">
-      <a href="https://novos.onl/tags/novos/" class="category-link">
-        <h2 class="category-title">novos</h2>
-        <p class="category-count">
-          1 article
-        </p>
-      </a>
-    </div>
-    
-    <div class="category-card">
-      <a href="https://novos.onl/tags/hello-world/" class="category-link">
-        <h2 class="category-title">hello-world</h2>
-        <p class="category-count">
-          1 article
-        </p>
-      </a>
-    </div>
-    
-    <div class="category-card">
-      <a href="https://novos.onl/tags/hacking/" class="category-link">
-        <h2 class="category-title">hacking</h2>
-        <p class="category-count">
-          1 article
-        </p>
-      </a>
-    </div>
-    
-    <div class="category-card">
-      <a href="https://novos.onl/tags/github/" class="category-link">
-        <h2 class="category-title">github</h2>
-        <p class="category-count">
-          1 article
-        </p>
-      </a>
-    </div>
-    
-    <div class="category-card">
-      <a href="https://novos.onl/tags/chromecast/" class="category-link">
-        <h2 class="category-title">chromecast</h2>
-        <p class="category-count">
-          1 article
-        </p>
-      </a>
-    </div>
-    
-  </div>
-  
+  <div class="post-content"><p>I remember when the Chromecast first came out. It truly felt like a little magical device that allowed me to put anything I wanted on the TV. It was cool and captivating. Since then, I've used that original device for all sorts of things and I still find uses for it often.</p>
+<p>After moving recently (and with a new Wi-Fi network), I went to set up my favorite little streaming device and found that <a rel="nofollow noreferrer external" href="https://support.google.com/chromecast/answer/7124014?hl=en">Google no longer supports the device</a>. As such, it isn't even possible to set it up with Google's own app.</p>
+<p>Fortunately (or perhaps unfortunately), there are quite a few users out there that found the same problem. A bit of searching led me to <a rel="nofollow noreferrer external" href="https://www.reddit.com/r/Chromecast/comments/14j9bob/how_to_setup_1st_gen_google_chrome_cast_now/">this Reddit thread</a>. Folks have been trying older phones, different apps, and various workarounds just to get a working device back on their network. Some things worked, some didn't. Many have given up. A shame too because the hardware still works.</p>
+<p>A comment in that thread linked to <a rel="nofollow noreferrer external" href="https://emcot.world/How_To_Connect_a_Gen_1_H2G2_42_Chromecast_Without_Google_Home">jjdb210's guide on EMCOT</a> which was quite helpful. They reverse-engineered the web API hosted on the device and documented the steps for configuring the Chromecast Wi-Fi without Google Home.</p>
+<p>For convenience, I wrapped those steps into a <a rel="nofollow noreferrer external" href="https://github.com/scmeek/original_chromecast_connect_wifi/blob/main/original_chromecast_connect_wifi.sh">Bash script</a>. It gets the device's public key, finds your network, encrypts the password, and sends and saves the configuration. A little "hacking" to do something that used to be routine.</p>
+<p>The script uses <code>curl</code>, <code>jq</code>, and <code>openssl</code>, and assumes you've already reset the Chromecast and connected your computer to its setup Wi-Fi. The guide covers the setup details and firmware differences; the script prompts for your network password and handles the requests from there.</p>
+<p>I've <a rel="nofollow noreferrer external" href="https://github.com/scmeek/original_chromecast_connect_wifi">open-sourced it on GitHub</a>. Improvements, PRs, and input from others are always welcome. Good luck to anyone trying to do the same thing - hope this helps you. 🙂 Maybe we can keep a few more of these little devices going.</p>
+<p>cheers -<br />
+scm</p>
+</div>
+  <footer class="post-footer">
+    <div class="post-tags"><span class="tags-label">Tags:</span><div class="tag-list"><a class="tag" href="https://novos.onl/tags/chromecast/">chromecast</a><a class="tag" href="https://novos.onl/tags/hacking/">hacking</a><a class="tag" href="https://novos.onl/tags/open-source/">open-source</a></div></div>
+    <div class="post-navigation"><a href="https://novos.onl/posts" class="back-to-blog">← Back to posts</a></div>
+  </footer>
+</article>
+<div class="giscus"><script
+  src="https://giscus.app/client.js"
+  data-repo="scmeek/novos_discussion"
+  data-repo-id="R_kgDOOqSLCA"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOOqSLCM4CqKRb"
+  data-mapping="title"
+  data-strict="1"
+  data-reactions-enabled="0"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="preferred_color_scheme"
+  data-lang="en"
+  crossorigin="anonymous"
+  async
+></script>
 </div>
 
         </div>

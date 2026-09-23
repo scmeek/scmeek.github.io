@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>novos - open-source</title>
+      <link>https://novos.onl</link>
+      <description>Personal notes, projects, and observations by Sean Meek.</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://novos.onl/tags/open-source/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Connect an Original Chromecast to a New Wi-Fi Network without Google Home</title>
+          <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://novos.onl/posts/2026/original-chromecast-connect-wifi/</link>
+          <guid>https://novos.onl/posts/2026/original-chromecast-connect-wifi/</guid>
+          <description xml:base="https://novos.onl/posts/2026/original-chromecast-connect-wifi/">&lt;p&gt;I remember when the Chromecast first came out. It truly felt like a little magical device that allowed me to put anything I wanted on the TV. It was cool and captivating. Since then, I&#39;ve used that original device for all sorts of things and I still find uses for it often.&lt;/p&gt;
+&lt;p&gt;After moving recently (and with a new Wi-Fi network), I went to set up my favorite little streaming device and found that &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://support.google.com/chromecast/answer/7124014?hl=en&quot;&gt;Google no longer supports the device&lt;/a&gt;. As such, it isn&#39;t even possible to set it up with Google&#39;s own app.&lt;/p&gt;
+&lt;p&gt;Fortunately (or perhaps unfortunately), there are quite a few users out there that found the same problem. A bit of searching led me to &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://www.reddit.com/r/Chromecast/comments/14j9bob/how_to_setup_1st_gen_google_chrome_cast_now/&quot;&gt;this Reddit thread&lt;/a&gt;. Folks have been trying older phones, different apps, and various workarounds just to get a working device back on their network. Some things worked, some didn&#39;t. Many have given up. A shame too because the hardware still works.&lt;/p&gt;
+&lt;p&gt;A comment in that thread linked to &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://emcot.world/How_To_Connect_a_Gen_1_H2G2_42_Chromecast_Without_Google_Home&quot;&gt;jjdb210&#39;s guide on EMCOT&lt;/a&gt; which was quite helpful. They reverse-engineered the web API hosted on the device and documented the steps for configuring the Chromecast Wi-Fi without Google Home.&lt;/p&gt;
+&lt;p&gt;For convenience, I wrapped those steps into a &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/scmeek/original_chromecast_connect_wifi/blob/main/original_chromecast_connect_wifi.sh&quot;&gt;Bash script&lt;/a&gt;. It gets the device&#39;s public key, finds your network, encrypts the password, and sends and saves the configuration. A little &quot;hacking&quot; to do something that used to be routine.&lt;/p&gt;
+&lt;p&gt;The script uses &lt;code&gt;curl&lt;/code&gt;, &lt;code&gt;jq&lt;/code&gt;, and &lt;code&gt;openssl&lt;/code&gt;, and assumes you&#39;ve already reset the Chromecast and connected your computer to its setup Wi-Fi. The guide covers the setup details and firmware differences; the script prompts for your network password and handles the requests from there.&lt;/p&gt;
+&lt;p&gt;I&#39;ve &lt;a rel=&quot;nofollow noreferrer external&quot; href=&quot;https://github.com/scmeek/original_chromecast_connect_wifi&quot;&gt;open-sourced it on GitHub&lt;/a&gt;. Improvements, PRs, and input from others are always welcome. Good luck to anyone trying to do the same thing - hope this helps you. 🙂 Maybe we can keep a few more of these little devices going.&lt;/p&gt;
+&lt;p&gt;cheers -&lt;br /&gt;
+scm&lt;/p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
