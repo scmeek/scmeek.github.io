@@ -11,6 +11,7 @@
   --font-heading-secondary: "Lora", Georgia, serif;
   --font-body: "DM Sans", "Avenir Next", "Segoe UI", sans-serif;
   --font-brand: "Bad Script", cursive;
+  --font-code: "Fragment Mono", "JetBrains Mono", monospace;
   --max-width: 1240px;
 }
 
@@ -194,6 +195,23 @@ a:focus {
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: none;
+}
+
+.error-code {
+  color: var(--color-text-muted);
+  font-family: var(--font-code);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.error-title {
+  color: var(--color-accent);
+  font-family: var(--font-heading-primary);
+  font-size: clamp(2.25rem, 7vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-transform: lowercase;
 }
 
 .blog-title {
@@ -514,6 +532,24 @@ a:focus {
   margin: 0.25rem 0 0.5rem;
 }
 
+pre,
+pre code {
+  font-family: var(--font-code);
+}
+
+/* Keep operators as individual characters, including in highlighted spans. */
+pre,
+code,
+pre * {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0, "dlig" 0, "calt" 0;
+}
+
+.post-content pre,
+.post-content pre code {
+  font-family: var(--font-code);
+}
+
 .post-content code {
   color: var(--color-accent);
   font-weight: 400;
@@ -585,17 +621,6 @@ a:focus {
   text-align: right;
 }
 
-[data-theme="light"] :is(.post-content, .content-section) pre.giallo [class~="z-l-1"] { color: #005cc5 !important; }
-[data-theme="light"] :is(.post-content, .content-section) pre.giallo [class~="z-l-2"] { color: #032f62 !important; }
-[data-theme="light"] :is(.post-content, .content-section) pre.giallo [class~="z-l-3"] { color: #22863a !important; }
-[data-theme="light"] :is(.post-content, .content-section) pre.giallo [class~="z-l-4"] { color: #586069 !important; }
-[data-theme="light"] :is(.post-content, .content-section) pre.giallo [class~="z-l-5"] { color: #6a737d !important; }
-[data-theme="light"] :is(.post-content, .content-section) pre.giallo [class~="z-l-6"] { color: #6f42c1 !important; }
-[data-theme="light"] :is(.post-content, .content-section) pre.giallo [class~="z-l-7"] { color: #b31d28 !important; }
-[data-theme="light"] :is(.post-content, .content-section) pre.giallo [class~="z-l-8"] { color: #d73a49 !important; }
-[data-theme="light"] :is(.post-content, .content-section) pre.giallo [class~="z-l-9"] { color: #b54708 !important; }
-[data-theme="light"] :is(.post-content, .content-section) pre.giallo [class~="z-l-10"] { color: #6f42c1 !important; }
-[data-theme="light"] :is(.post-content, .content-section) pre.giallo [class~="z-l-11"] { color: #b31d28 !important; }
 
 [data-theme="dark"] :is(.post-content, .content-section) pre.giallo {
   background: #303446;
