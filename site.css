@@ -758,6 +758,12 @@ hr {
   background-color: var(--color-border);
 }
 
+/* Search is disabled until it is useful again. */
+.search-toggle,
+.search-overlay {
+  display: none !important;
+}
+
 ::selection {
   background: var(--color-accent-warm);
   color: #132a38;
