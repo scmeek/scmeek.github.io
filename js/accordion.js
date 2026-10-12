@@ -15,6 +15,7 @@ class Accordion {
   }
 
   onClick(e) {
+    if (e.target.closest(".details-copy-button")) return;
     e.preventDefault();
     this.el.style.overflow = "hidden";
     if (this.isClosing || !this.el.open) {
@@ -87,4 +88,30 @@ class Accordion {
 
 document.querySelectorAll(".animated-details").forEach((el) => {
   new Accordion(el);
+});
+
+document.querySelectorAll(".details-copy-toolbar").forEach((toolbar) => {
+  if (!navigator.clipboard?.writeText) return;
+
+  const button = toolbar.querySelector("button");
+  const status = toolbar.querySelector('[role="status"]');
+  const code = toolbar.closest("details").querySelector("pre");
+  let resetTimer;
+  toolbar.hidden = false;
+
+  button.addEventListener("click", async () => {
+    clearTimeout(resetTimer);
+    button.disabled = true;
+    status.textContent = "";
+
+    try {
+      await navigator.clipboard.writeText(code.textContent.trim() + "\n");
+      status.textContent = "Copied!";
+    } catch {
+      status.textContent = "Copy failed.";
+    } finally {
+      button.disabled = false;
+      resetTimer = setTimeout(() => (status.textContent = ""), 4000);
+    }
+  });
 });
